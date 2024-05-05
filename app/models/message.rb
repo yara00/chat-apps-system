@@ -1,6 +1,7 @@
 class Message < ApplicationRecord
+    include Searchable
     # associations
-    belongs_to :chat, foreign_key: 'chat_number'
+    belongs_to :chat
     
     # validations
     validates :number, presence: true, uniqueness: { scope: :chat_number },
