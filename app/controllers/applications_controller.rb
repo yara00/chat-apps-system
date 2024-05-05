@@ -5,20 +5,20 @@ class ApplicationsController < ApplicationController
 
     def index 
         @applications = Application.all
-        serialize_collection("Application", @applications)
+        render_json(data: serialize_collection("Application", @applications))
     end
     
     def show 
-        serialize_record("Application", @application)
+        render_json(data: serialize_record("Application", @application))
     end
 
     def create 
         @application = Application.create!(application_params)
-        serialize_record("Application", @application)
+        render_json(data: serialize_record("Application", @application), status: :created)
     end
 
     def update 
         @application.update!(application_params)
-        serialize_record("Application", @application)
+        render_json(data: serialize_record("Application", @application))
     end
 end

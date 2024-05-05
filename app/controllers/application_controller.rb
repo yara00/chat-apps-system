@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::API
-    include SetterMethods
+    include SettersMethods
     include ParamsHelper
     include ResponseHelper
+    include ExceptionHandler
 end
