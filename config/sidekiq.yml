@@ -1,0 +1,8 @@
+---
+:concurrency: 10
+:queues:
+  - default
+  - chats
+  - messages
+:redis:
+  url: redis://localhost:6379/0
