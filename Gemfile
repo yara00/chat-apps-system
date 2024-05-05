@@ -19,6 +19,10 @@ gem "redis", ">= 4.0.1"
 
 gem "sidekiq"
 gem "jsonapi-serializer"
+
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
