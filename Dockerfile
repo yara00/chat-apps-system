@@ -1,5 +1,5 @@
 # Use Ruby 3.1 base image
-FROM ruby:3.1
+FROM ruby:3.1.1
 
 # Install system dependencies
 RUN apt-get update -qq && apt-get install -y \
@@ -20,8 +20,8 @@ RUN bundle install
 # Copy the rest of the application code
 COPY . .
 
-# Precompile assets
-RUN bundle exec rails assets:precompile
+# Precompile assets with webpacker
+RUN rails webpacker:compile
 
 # Expose port 3000 to the Docker host
 EXPOSE 3000

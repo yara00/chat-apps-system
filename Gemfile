@@ -26,6 +26,7 @@ gem "jsonapi-serializer"
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+gem 'webpacker'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
