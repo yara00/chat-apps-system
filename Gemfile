@@ -18,6 +18,9 @@ gem "puma", ">= 5.0"
 gem "redis", ">= 4.0.1"
 
 gem "sidekiq"
+gem 'sidekiq-scheduler'
+gem 'sidekiq-cron'
+
 gem "jsonapi-serializer"
 
 gem 'elasticsearch-model'

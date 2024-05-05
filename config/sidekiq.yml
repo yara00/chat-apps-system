@@ -1,8 +1,8 @@
----
-:concurrency: 10
-:queues:
-  - default
-  - chats
-  - messages
-:redis:
-  url: redis://localhost:6379/0
+:scheduler:
+  :schedule:
+    ChatsCountJob:
+      every: '45m'
+      class: "ChatsCountJob"
+    MessagesCountJob:
+      every: '45m'
+      class: "MessagesCountJob"
