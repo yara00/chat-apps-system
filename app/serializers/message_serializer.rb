@@ -3,10 +3,6 @@
 class MessageSerializer
     include JSONAPI::Serializer
 
-    attribute :application_token do |record|
-        record.chat.application.token 
-    end
-
     attribute :chat_number do |record|
         record.chat.number 
     end

@@ -2,10 +2,6 @@
 
 class ChatSerializer
     include JSONAPI::Serializer
-    
-    attribute :application_token do |record|
-        record.application.token 
-    end
 
-    attributes :number, :messages_count
+    attributes :application_token, :number, :messages_count
 end
