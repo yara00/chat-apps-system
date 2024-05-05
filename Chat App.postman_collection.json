@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "7fc6c0f6-78e6-4794-8066-6b28d9fa0741",
+		"name": "Chat App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18655606"
+	},
+	"item": [
+		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "yara",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "edited",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chats",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": ""
+								},
+								{
+									"key": "chat_number",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number",
+								"messages"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								},
+								{
+									"key": "chat_number",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "body",
+									"value": "message body",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number",
+								"messages"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								},
+								{
+									"key": "chat_number",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number/messages/search?body=di",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number",
+								"messages",
+								"search"
+							],
+							"query": [
+								{
+									"key": "body",
+									"value": "di"
+								}
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								},
+								{
+									"key": "chat_number",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number/messages/:message_number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number",
+								"messages",
+								":message_number"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": ""
+								},
+								{
+									"key": "chat_number",
+									"value": ""
+								},
+								{
+									"key": "message_number",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "body",
+									"value": "edit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/applications/:application_token/chats/:chat_number/messages/:message_number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								":application_token",
+								"chats",
+								":chat_number",
+								"messages",
+								":message_number"
+							],
+							"variable": [
+								{
+									"key": "application_token",
+									"value": "fegPXMnp396VByvEhrN57woB"
+								},
+								{
+									"key": "chat_number",
+									"value": "10"
+								},
+								{
+									"key": "message_number",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
