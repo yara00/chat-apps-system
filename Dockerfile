@@ -20,8 +20,6 @@ RUN bundle install
 # Copy the rest of the application code
 COPY . .
 
-# Precompile assets with webpacker
-RUN rails webpacker:compile
 
 # Expose port 3000 to the Docker host
 EXPOSE 3000
